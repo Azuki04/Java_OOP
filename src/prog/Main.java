@@ -2,11 +2,19 @@ package prog;
 
 import java.util.*;
 
+import prog.account.Account;
 import prog.currency.CurrencyCalculater;
 
 public class Main {
 
 	public static void main(String[] args) {
+
+		ArrayList<Account> clientList = new ArrayList<Account>();
+		clientList.add(new Account("2012dE2eea02", "Mike", "Dao", 2302, 233.5));
+
+
+		System.out.println(clientList);
+
 		try (Scanner sc = new Scanner(System.in)) {
 			System.out.println("Bearbeiter 1, Bitte Wechselwaehrung angeben: ");
 			String curTo = sc.nextLine();
