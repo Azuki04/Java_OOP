@@ -4,6 +4,7 @@ import java.util.*;
 
 import prog.account.Account;
 import prog.currency.CurrencyCalculater;
+import prog.currency.CurrencyLoader;
 
 public class Main {
 
@@ -13,8 +14,31 @@ public class Main {
 		clientList.add(new Account("2012dE2eea02", "Mike", "Dao", 2302, 233.5));
 
 
-		System.out.println(clientList);
+//---------------------------------------------------//
+		Integer [] zahlen = {5,2,8,4,1};
+		Integer [] result = new Integer[5];
+		for (Integer  zahl : zahlen) {
+			System.out.print(zahl);
+		}
 
+		for (int zahl = 0; zahl < zahlen.length; zahl++) {
+			for (int zahl2 = 0; zahl2 < zahlen.length ; zahl2++) {
+				if( zahlen[zahl] < zahlen[zahl2]){
+					int temp = zahlen[zahl];
+					zahlen[zahl] = zahlen[zahl2];
+					zahlen[zahl2] = temp;
+				}
+			}
+		}
+
+		for (Integer  zahl : zahlen) {
+			System.out.print(zahl  + ", ");
+		}
+//------------------------------//
+		System.out.println(clientList);
+		CurrencyLoader test = new CurrencyLoader();
+		System.out.println(test.currArray);
+//-------------------------------------//
 		try (Scanner sc = new Scanner(System.in)) {
 			System.out.println("Bearbeiter 1, Bitte Wechselwaehrung angeben: ");
 			String curTo = sc.nextLine();

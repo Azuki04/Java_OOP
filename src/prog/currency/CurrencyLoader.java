@@ -3,7 +3,7 @@ package prog.currency;
 import java.util.ArrayList;
 
 public class CurrencyLoader {
-	private ArrayList<Currency> currArray = new ArrayList<Currency>();
+	public ArrayList<Currency> currArray = new ArrayList<Currency>();
 	
 	public CurrencyLoader() {
 		this.initCurrency();

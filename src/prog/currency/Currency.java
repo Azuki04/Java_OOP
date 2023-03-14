@@ -24,5 +24,10 @@ public class Currency {
 	public void setCurrency(String name) {
 		this.currencyName = name;
 	}
+
+	@Override
+	public String toString() {
+		return "Account: [currencyRate= " + currencyRate + ", currencyName= " + currencyName  + " ]";
+	}
 	
 }
